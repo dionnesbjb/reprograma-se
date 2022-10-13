@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --corPrincipal: #4056a1;
+    --corSecundaria: #efe2ba;
+    --corTerciaria: #d79922;
+    --corAlerta: #f13c20;
+    --corClara: #c5cbe3;
+    --corEscura: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--corSecundaria);
+}
+
+.header {
+    padding: 50px calc(10% + 2vw);
+    background-image: linear-gradient(var(--corPrincipal), var(--corEscura));
+    color: white;
+    width: 100%;
+}
+
+.header td {
+    vertical-align: middle;
+}
+
+.logo {
+    width: 1%;
+    padding-right: 2vw;
+}
+
+.header img {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+}
+
+.header b {
+    font-size: 4vw;
+}
+
+.header small {
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tabela {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 2vw;
+}
+
+.menu {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.menu a {
+    font-family: "Caveat";
+    display: inline-block;
+    padding: 10px 4vw;
+    font-size: 3vw;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    margin: .7vw;
+}
+
+.menu a:hover {
+    color: var(--corClara);
+    background-color: var(--corPrincipal);
+}
+
+.menu a.active {
+    color: white;
+    background-color: var(--corEscura);
+}
+
+.hero h1 {
+    font-size: 4vw;
+    color: var(--corTerciaria);
+}
+
+.hero h2 {
+    font-size: 3vw;
+    font-family: "Caveat";
+    color: var(--corClara);
+    line-height: 3vw;
+}
+
+.hero h3 {
+    font-size: 2vw;
+    font-family: "Caveat";
+    color: white;
+}
+
+.hero td:first-child {
+    background-color: var(--corEscura);
+    padding: 2vw;
+    border-radius: 20px;
+    border-collapse: separate;
+}
+
+.hero a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--corPrincipal);
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    font-weight: bold;
+}
+
+.hero a:hover {
+    outline: solid 2px var(--corTerciaria);
+    outline-offset: -2px;
+}
+
+.hero img {
+    border-radius: 20px;
+}
+
+.td1 {
+    width: 12vw;
+}
+
+.paginas a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--corEscura);
+}
+
+.paginas {
+    font-size: 2vw;
+}
+
+.experiencias {
+    font-size: 2vw;
+}
+
+.experiencias td:first-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.projetos {
+    font-size: 2vw;
+}
+
+.projetos td:first-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.projetos img {
+    width: 25vw;
+}
+
+progress {
+    height: 4vw;
+}
+
+.formcontato {
+    font-size: 2vw;
+}
+
+.formcontato select,
+.formcontato input,
+.formcontato textarea {
+    font-size: 2vw;
+    padding: .5vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    width: 40vw;
+    border: solid 1px var(--corEscura);
+}
+
+.formcontato button {
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--corPrincipal);
+    color: white;
+}
+
+.formcontato hr {
+    margin: 2vw 0;
+}
+
+.footer {
+    padding: 30px calc(10% + 2vw);
+    color: var(--corEscura);
+    text-align: center;
+    background-color: white;
+    border-top: solid 1px var(--corEscura);
+}
+
+.footer img {
+    width: 10vw;
+}
+
+.pt1 {
+    padding-top: 10px;
+}
+
+.pt2 {
+    padding-top: 20px;
+}
+
+.pt3 {
+    padding-top: 30px;
+}
+
+.pt4 {
+    padding-top: 40px;
+}
+
+.pt5 {
+    padding-top: 50px;
+}
+
+.p1 {
+    padding: 5px;
+}
+
+.p2 {
+    padding: 10px;
+}
+
+.p3 {
+    padding: 15px;
+}
+
+.p4 {
+    padding: 20px;
+}
+
+.p5 {
+    padding: 25px;
+}

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4056a1;
+    --secondary: #efe2ba;
+    --success: #d79922;
+    --danger: #f13c20;
+    --light: #c5cbe3;
+    --dark: #333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.conteiner {
+    width: 80vw;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+.areaesquerda {
+    width: 18vw;
+    background-color: white;
+    position: absolute;
+    padding: 15px;
+    top: 0px;
+}
+
+@media screen {
+    .areaesquerda {
+        position: fixed;
+        height: 100vh;
+    }
+}
+
+.areaesquerda .logo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.areaesquerda p img {
+    width: 20px;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.areaesquerda p a {
+    font-size: 20px;
+}
+
+.social img {
+    width: 20px;
+    display: inline-block;
+    margin-right: .01vw !important;
+}
+
+.areadireita {
+    width: 62vw;
+    position: relative;
+    left: 18vw;
+    background-color: #eee;
+    padding: 15px;
+}
+
+.areadireita h1 b {
+    font-size: 3rem;
+    color: var(--dark);
+}
+
+.areadireita hr {
+    border: 0;
+    height: 8px;
+    background-color: #ddd;
+    margin: 15px 0;
+    clear: both;
+}
+
+.card {
+    width: calc((100% - 1.6rem)/3);
+    background-color: white;
+    display: inline-block;
+}
+
+.card img {
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+}
+
+.sobre .hero {
+    position: relative;
+    background-color: white;
+}
+
+.sobre .hero .texto {
+    width: 35%;
+    float: left;
+    vertical-align: top;
+    padding: 30px;
+}
+
+.sobre .hero .texto h2 {
+    font-size: 2vw;
+}
+
+.sobre .hero .imagem {
+    float: left;
+    width: 65%;
+}
+
+.sobre .hero .imagem img {
+    width: 100%;
+    display: inline-block;
+}
+
+.btn {
+    background-color: var(--dark);
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 1.3vw;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--dark);
+    outline: solid 1px var(--dark);
+    outline-offset: -1;
+}
+
+.progresso {
+    height: 3vw;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.progresso div {
+    background-color: var(--dark);
+    height: 3vw;
+    display: inline-block;
+    color: white;
+    line-height: 3vw;
+    text-align: center;
+}
+
+.precos table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: solid 1px #ddd;
+}
+
+.precos table td {
+    padding: 15px;
+    width: 33.33%;
+    border: solid 1px #ddd;
+}
+
+.contato {
+    background-color: #888;
+    padding: 15px;
+    color: white;
+}
+
+.contato a {
+    color: white;
+}
+
+.contato table {
+    width: 100%;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+}
+
+.contato table td {
+    width: 33.33%;
+    padding: 15px;
+    border: solid 1px #ccc;
+}
+
+.contato table img {
+    width: 64px;
+}
+
+.contato label {
+    font-size: 1.3vw;
+}
+
+.contato input,
+.contato select,
+.contato textarea {
+    padding: 15px;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    width: 100%;
+}
+
+.rodape {
+    text-align: center;
+    color: white;
+    font-size: 1.3vw;
+}

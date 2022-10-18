@@ -1,0 +1,38 @@
+:root{
+    /* CSS HEX */
+        --no-photo-blue:  #a3e7fcff;
+        --ocean-green:    #26c485ff;
+        --viridian-green: #32908fff;
+        --eggplant:       #553a41ff;
+        --dark-sienna:    #2f0601ff;
+
+}
+
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+    background-color: var(--no-photo-blue);
+    padding:0;
+    margin:0;
+    box-sizing: border-box
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:var(--eggplant)
+}
+
+p{
+    color: var(--dark-sienna)
+}
+
+a{ color: var(--viridian-green);
+text-decoration: none;}
+
+header, footer {
+    background-color: var(--ocean-green);
+    padding:10px;
+    text-align:center;
+}
+
+main{
+    padding: 10px
+}

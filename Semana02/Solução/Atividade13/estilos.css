@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body{
+    font-family: Montserrat;
+    color: rgb(110, 110, 110);
+    text-align: justify;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+header {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding: 1px;
+}
+
+#citacao {
+    border-left-style: solid ;
+    border-color: green;
+    padding-left: 2em;
+}
+
+
+header, footer{
+    background-color: rgba(50, 50, 50);
+    color: antiquewhite;
+}
+
+a {
+    color: greenyellow;
+    font-style: italic;
+    text-decoration: none;
+}
+
+li{
+    list-style-image: url(checklist.svg);
+}
+
+footer{
+    padding: 25px 10px;
+    text-align: center;
+    color: #D9C196 ;
+}

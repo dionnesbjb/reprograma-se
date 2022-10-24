@@ -1,0 +1,37 @@
+#p1::after{
+    content: "- Conteúdo Antes do Parágrafo -";
+    font-weight: bold;
+  }
+  
+  #p2::first-letter {
+    font-size: 200%;
+    color: red;
+  }
+  
+  a[href*="https"] {
+    background-color: yellow;
+  }
+  
+  a[href$=".xls"] {
+    background-color: black;
+  }
+  
+  input[type='text']:focus {
+    background-color: blue;
+  }
+  
+  input[type='number']:out-of-range {
+    background-color: red;
+  }
+  
+  input[type='checkbox']:checked + label {
+    background-color: yellow;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  tr:nth-child(odd) {
+    background: #f50000
+  }

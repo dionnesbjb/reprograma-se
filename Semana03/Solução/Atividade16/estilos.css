@@ -1,0 +1,49 @@
+div{
+    display: inline-block;
+  }
+  
+  #div1{
+    position: absolute ;
+    background-color: #dedede;
+    left: 150px;
+    top: 150px;
+    height: 250px;
+    width: 250px
+  }
+  
+  #div2{
+    position: relative ;
+    background-color: yellow;
+    right: 25px;
+    bottom: 25px;
+    left: 0px;
+    top: 0px;
+    height: 70px;
+    width: 70px
+  }
+  
+  #div3{
+    position: relative ;
+    background-color: blue;
+    left:90px;
+    top: 90px;
+    height: 70px;
+    width: 70px
+  }
+  
+  #div4{
+    position: relative ;
+    background-color: red;
+    right:90px; 
+    top: 90px;
+    height: 70px;
+    width: 70px
+  }
+  
+  #div5{
+    position: relative;
+    top: 520px;
+    background-color: green;
+    width: 555px;
+    height: 70px;
+  }

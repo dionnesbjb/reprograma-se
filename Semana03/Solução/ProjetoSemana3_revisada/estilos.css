@@ -91,7 +91,7 @@ a {
     position: relative;
     /* 14. afastamento esquerdo de 18% */
     /* FAZER AQUI */
-    margin-left: 18vw;
+    left: 18vw;
     background-color: #eee;
     padding: 15px;
 }

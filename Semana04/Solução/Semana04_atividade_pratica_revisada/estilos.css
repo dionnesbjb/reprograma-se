@@ -333,7 +333,7 @@ div.rodape {
     .sobre .hero {
         /* 18. Grid de duas colunas iguais */
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
     }
 
     .sobre .hero img {

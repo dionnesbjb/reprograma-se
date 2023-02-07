@@ -21,9 +21,10 @@ function listarAnimais() { // Implementação da função (10 pontos)
   }
 
   for (var i = 0; i < animais.length; i++) {
-    let novaDiv = document.createElement('div');        
-    novaDiv.innerHTML = `<img src=./img/${animais[i].imagem}.jpg id=${animais[i].nome}>`;
-    document.querySelector('#container').appendChild(novaDiv);
+    let img = document.createElement("img");
+    img.setAttribute("src", "./img/" + animais[i].imagem + ".jpg");
+    img.setAttribute("id", animais[i].nome);  
+    container.appendChild(img);
   }
 
 }

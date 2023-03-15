@@ -13,7 +13,7 @@ function MaiorNota(alunos) {
   }
   
   function MenorNota(alunos) {
-    let menorNota = alunos[0];
+    let menorNota = alunos[0].nota;
     let alunoMenorNota = alunos[0];
   
     for (let i = 1; i < alunos.length; i++) {

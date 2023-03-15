@@ -5,7 +5,7 @@ try{
   var num1 = Number(prompt('Entre com o primeiro número: '));
   var num2 = Number(prompt('Entre com o segundo número: '));
 
-  if(num2 === 0){
+  if(num2 == 0){
     throw new Error('Divisão por zero');
   }
 

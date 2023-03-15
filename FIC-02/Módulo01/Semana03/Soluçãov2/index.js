@@ -1,10 +1,10 @@
 const fs = require('fs');
 const prompt = require('prompt-sync')();
 
-function adicionarCarro(lista, carro){
+function adicionarPessoa(lista, pessoa){
 
-  lista.push(carro);
-  json = JSON.stringify({carros: lista})
+  lista.push(pessoa);
+  json = JSON.stringify({pessoas: lista})
   
   return new Promise((resolve, reject) => {
     fs.writeFile('bd.json', json, (erro) => {
@@ -13,12 +13,12 @@ function adicionarCarro(lista, carro){
         reject(erro);
       }
 
-      resolve('Carro adicionado com sucesso!')
+      resolve('Pessoa cadastrada com sucesso!')
     });
   });
 }
 
-function obterCarros(){
+function obterPessoas(){
 
   return new Promise((resolve, reject) => {
     fs.readFile('./bd.json', 'utf-8', (erro, data) => {
@@ -32,47 +32,54 @@ function obterCarros(){
   });
 }
 
-async function listarCarros(){
+//Listar pessoas
+// async function, visto na aula 12
+async function listarPessoas(){
 
   try{
-    var json = await obterCarros();
-    var carros = JSON.parse(json).carros;
+    //Chama função obterPessoas que ira ler o arquivo json
+    var json = await obterPessoas();
+    //Faz o parte do json para o array pessoas
+    var pessoas = JSON.parse(json).pessoas;
 
-    console.table(carros);
+    // O console.table ira converter o json para o formato de tabela no console 
+    console.table(pessoas);
   }catch(erro){
-    console.log('Ocorreu um erro ao buscar os carros: ' + erro);
+    console.log('Ocorreu um erro ao buscar as pessoas: ' + erro);
   }
   
 }
 
-async function incluirCarro(){
+async function incluirPessoa(){
+  
+  var nome = prompt('Digite o nome da pessoa: ');
+  var telefone = prompt('Digite o telefone montadora do carro: ');
 
-  var placa = prompt('Digite a placa do carro: ');
-  var nome = prompt('Digite o nome do carro: ');
-  var montadora = prompt('Digite a montadora do carro: ');
-
-  var carro = {placa: placa, nome: nome, montadora: montadora};
+  var pessoa = {nome: nome, telefone: telefone};
 
   try{
-    var carros = await obterCarros(); 
-    var lista = JSON.parse(carros).carros;
+    var pessoas = await obterPessoas(); 
+    var lista = JSON.parse(pessoas).pessoas;
     
-    adicionarCarro(lista, carro);
-    console.log('Carro cadastrado com sucesso...');
+    adicionarPessoa(lista, pessoa);
+    console.log('Pessoa cadastrada com sucesso...');
   }catch(erro){
-    console.log('Ocorreu um erro ao adicionar o carro: ' + erro);
+    console.log('Ocorreu um erro ao adicionar a pessoa: ' + erro);
   }
 }
 
+//Menu principal
+// async function, visto na aula 12
 async function menu(){
 
   var op;
 
+  //Ira executar essa estrutura de repetição até que o usuário digite 0 no console
   do{
-    console.log(`Sistema de cadastro de carros
+    console.log(`Sistema de cadastro de pessoas
     
-    1 - Listar carros
-    2 - Cadastrar carros
+    1 - Listar pessoas
+    2 - Cadastrar pessoas
     0 - Sair
     `);
 
@@ -80,19 +87,17 @@ async function menu(){
 
     switch (op){
       case '1':
-        await listarCarros();
-        prompt(`
-        
-Enter para continuar...`);
+        await listarPessoas();
+        prompt(`Enter para continuar...`);
         console.clear();
         break;
       case '2':
-        await incluirCarro();
+        await incluirPessoa();
         prompt(`Enter para continuar...`);
         console.clear();
         break;
       case '0':
-        console.log('Obrigado por usar o sistema. Até mais!');
+        console.log('Programa encerrado!');
         break;
       default:
         console.log('Entrada inválida...');
@@ -101,4 +106,5 @@ Enter para continuar...`);
   }while(op !== '0');  
 }
 
+//Ao executar o index.js, a função menu é chamada 
 menu();

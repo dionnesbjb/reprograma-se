@@ -5,40 +5,41 @@ function adicionarPessoa(lista, pessoa){
 
   lista.push(pessoa);
   json = JSON.stringify({pessoas: lista})
-  
-  return new Promise((resolve, reject) => {
-    fs.writeFile('bd.json', json, (erro) => {
+
+  try{
+    fs.writeFile('./bd.json', json, (erro) => {
 
       if(erro){
-        reject(erro);
+        return console.log('Ocorreu um erro');
       }
-
-      resolve('Pessoa cadastrada com sucesso!')
+    
+      console.log('Pessoa cadastrada com sucesso!');
     });
-  });
+  }catch(erro){
+    console.log('Ocorreu um erro ao cadastrar a pessoa: ' + erro);
+  }    
 }
 
 function obterPessoas(){
+  
+  try{
+    //Chama função obterPessoas que ira ler o arquivo json
+    var data = fs.readFileSync('./bd.json', 'utf-8');    
 
-  return new Promise((resolve, reject) => {
-    fs.readFile('./bd.json', 'utf-8', (erro, data) => {
+    return data;
+  }catch(erro){
+    console.log('Ocorreu um erro ao buscar as pessoas: ' + erro);
+  }
 
-      if(erro){
-        reject(erro);
-      }
-      
-      resolve(data);
-    })
-  });
+  
 }
 
 //Listar pessoas
-// async function, visto na aula 12
-async function listarPessoas(){
+function listarPessoas(){
 
   try{
     //Chama função obterPessoas que ira ler o arquivo json
-    var json = await obterPessoas();
+    var json = obterPessoas();
     //Faz o parte do json para o array pessoas
     var pessoas = JSON.parse(json).pessoas;
 
@@ -50,7 +51,7 @@ async function listarPessoas(){
   
 }
 
-async function incluirPessoa(){
+function incluirPessoa(){
   
   var nome = prompt('Digite o nome da pessoa: ');
   var telefone = prompt('Digite o telefone da pessoa: ');
@@ -58,7 +59,7 @@ async function incluirPessoa(){
   var pessoa = {nome: nome, telefone: telefone};
 
   try{
-    var pessoas = await obterPessoas(); 
+    var pessoas = obterPessoas(); 
     var lista = JSON.parse(pessoas).pessoas;
     
     adicionarPessoa(lista, pessoa);
@@ -69,8 +70,7 @@ async function incluirPessoa(){
 }
 
 //Menu principal
-// async function, visto na aula 12
-async function menu(){
+function menu(){
 
   var op;
 
@@ -87,12 +87,12 @@ async function menu(){
 
     switch (op){
       case '1':
-        await listarPessoas();
+        listarPessoas();
         prompt(`Enter para continuar...`);
         console.clear();
         break;
       case '2':
-        await incluirPessoa();
+        incluirPessoa();
         prompt(`Enter para continuar...`);
         console.clear();
         break;
@@ -102,6 +102,7 @@ async function menu(){
       default:
         console.log('Entrada inválida...');
         break;
+        console.clear();
     }
   }while(op !== '0');  
 }

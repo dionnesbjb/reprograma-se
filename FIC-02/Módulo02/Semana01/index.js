@@ -5,6 +5,15 @@ const porta = 443
 
 const servidor = http.createServer((req, res) => {
 
+    //cria arquivo (appendFile)
+    //se existir o arquivo ele atualiza/adiciona
+    fs.appendFile('./teste.txt', 'Nunc accumsan leo sed ex ornare consequat. Sed sollicitudin cursus libero, vel eleifend lorem pretium eget. Quisque in lacus quis velit pharetra tempus in non velit. Fusce feugiat dui nulla, quis tempor eros viverra pulvinar. Maecenas auctor sit amet neque eget placerat. Aliquam luctus condimentum nisl, eu varius lacus auctor eu. Nunc vitae ex fringilla tellus porta hendrerit vel eget elit. Curabitur nec vehicula felis, ac sagittis elit. Cras ultrices nibh eget metus egestas, eu dictum libero interdum. Suspendisse id neque nulla. Fusce nunc magna, consectetur ut odio eu, tristique pharetra sem.', (err) => {
+        //indica o arquivo texte.txt e cria o conteudo nele
+        //se houver erro, dispara(throw) a mensagem de erro.
+        if (err) throw err
+        console.log('Arquivo criado!')        
+    })
+
     fs.readFile('pagina.html', (err, arquivo) => {
         //lê o arquivo site.html e anexa em arquivo
         res.writeHead(200, { 'Content-Type': 'text/html' })
@@ -13,17 +22,6 @@ const servidor = http.createServer((req, res) => {
         //retorna para esse servidor e finaliza
         return res.end()
     })
-
-    //cria arquivo (appendFile)
-    //se existir o arquivo ele atualiza/adiciona
-    fs.appendFile('./teste.txt', 'Nunc accumsan leo sed ex ornare consequat. Sed sollicitudin cursus libero, vel eleifend lorem pretium eget. Quisque in lacus quis velit pharetra tempus in non velit. Fusce feugiat dui nulla, quis tempor eros viverra pulvinar. Maecenas auctor sit amet neque eget placerat. Aliquam luctus condimentum nisl, eu varius lacus auctor eu. Nunc vitae ex fringilla tellus porta hendrerit vel eget elit. Curabitur nec vehicula felis, ac sagittis elit. Cras ultrices nibh eget metus egestas, eu dictum libero interdum. Suspendisse id neque nulla. Fusce nunc magna, consectetur ut odio eu, tristique pharetra sem.', (err) => {
-        //indica o arquivo texte.txt e cria o conteudo nele
-        //se houver erro, dispara(throw) a mensagem de erro.
-        if (err) throw err
-        console.log('Arquivo criado!')
-        //res.end()
-    })
-
 
     async function readFileByLine(file) {
         const fileStream = fs.createReadStream(file);

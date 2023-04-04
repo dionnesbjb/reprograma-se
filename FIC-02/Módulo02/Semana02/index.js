@@ -2,6 +2,15 @@ const express = require('express')
 const app = express()
 const porta = 443
 
+// Os arquivos ficam disponibilizados no raiz
+// localhost:443/foto.png
+//app.use(express.static('fotos'));
+
+// Cria um path virtual "/exemplo", onde os arquivos serão disponibilizados nessa pasta
+// localhost:443/fotos/foto.png
+app.use('/fotos', express.static('fotos'))
+app.use('/css', express.static('css'))
+
 app.get('/', function(req,res){
 res.sendFile(__dirname + '/home.html')
 })
@@ -14,4 +23,6 @@ res.sendFile(__dirname + '/p2.html')
 app.get('/p3', function(req,res){
 res.sendFile(__dirname + '/p3.html')
 })
+
+
 app.listen(porta, ()=> {console.log('Servidor rodando')})

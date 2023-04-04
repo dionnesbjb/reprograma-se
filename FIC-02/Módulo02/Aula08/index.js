@@ -17,3 +17,5 @@ res.write('<h1>PADRAO </h1')
 }
 res.end()
 })
+
+servidor.listen(porta, ()=>{console.log('Servidor Rodando')})

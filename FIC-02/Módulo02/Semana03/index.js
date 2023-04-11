@@ -4,6 +4,13 @@ const fs = require('fs')
 const porta = 443
 
 const servidor = http.createServer((req, res) => {
+    if(req.url.match("\.css$")){
+        var cssPath = path.join(__dirname, 'public', req.url);
+        var fileStream = fs.createReadStream(cssPath, "UTF-8");
+        res.writeHead(200, {"Content-Type": "text/css"});
+        fileStream.pipe(res);
+    }
+
     if (req.url == '/enviodearquivo') {
         const form = new formidavel.IncomingForm()
         form.parse(req, (erro, campos, arquivos) => {

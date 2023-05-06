@@ -98,8 +98,8 @@ Funcionario.init(sequelize);
             "rh@empresa.com"
     });
 
-    // Deletando objeto Secretaria
-    const setor_delete = await Setor.findByPk(2);
+    // Deletando objeto Contabilidade
+    const setor_delete = await Setor.findByPk(4);
     setor_delete.destroy();
 
     // Atualizando objeto Recursos Humanos

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../db/db');
-const Funcionario = database.define('funcionario', {
-    matricula: {
+const Usuario = database.define('usuario', {
+    id_usuario: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -9,22 +9,16 @@ const Funcionario = database.define('funcionario', {
     },
     nome: {
         type: Sequelize.STRING,
-        allowNull: false,
-    },
-    endereco: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    telefone: {
-        type: Sequelize.STRING,
         allowNull: false
     },
     email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
     },
-    nascimento: {
-        type: Sequelize.DATE,
+    senha: {
+        type: Sequelize.STRING,
         allowNull: false
     }
-}, { database, modelname: 'funcionario', tableName: 'funcionarios' })
-module.exports = Funcionario;
+}, { database, modelname: 'usuario', tableName: 'usuarios' });
+
+module.exports = Usuario;

@@ -6,12 +6,12 @@ const Tarefa = require('./model/tarefaModel');
 const routes = require('./routes/routes');
 
 try {
-    database.sync().then(() => {
-        console.log("Sucesso ao sincronizar!")
-    })
+  database.sync().then(() => {
+    console.log("Sucesso ao sincronizar!")
+  })
 }
 catch (erro) {
-    console.log("Houve uma falha ao sincronizar com o banco de dados", erro);
+  console.log("Houve uma falha ao sincronizar com o banco de dados", erro);
 }
 
 
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/", routes);
 
 app.get("/", (req, res) => {
-    return res.json({ message: "Sistema de Lista de Tarefas" });
+  return res.json({ message: "Sistema de Lista de Tarefas" });
 });
 
 app.listen(3000);

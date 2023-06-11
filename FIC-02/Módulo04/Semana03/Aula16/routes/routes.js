@@ -4,7 +4,7 @@ const usuarioController = require("../controller/usuarioController");
 const tarefaController = require("../controller/tarefaController");
 
 router.get("/", (req, res) => {
-    return res.json({ message: "Sistema de Lista de Tarefas" });
+  return res.json({ message: "Sistema de Lista de Tarefas" });
 });
 
 router.post("/usuarios/cadastrar", usuarioController.UsuarioCreate);

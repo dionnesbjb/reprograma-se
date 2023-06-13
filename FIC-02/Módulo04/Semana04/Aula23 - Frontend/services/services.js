@@ -5,7 +5,7 @@ module.exports = class Services {
     static async UsuarioLogin(req, res) {
         let valores = req.body;
         const options = {
-            url: 'https://fic2-m4-semana04-aula23-backend.schimith1.repl.co/login',
+            url: 'https://fic2-m4-semana04-aula22-backend.schimith1.repl.co/login',
             method: 'POST',
             data: valores
         };
@@ -20,7 +20,7 @@ module.exports = class Services {
     static async UsuarioCreate(req, res) {
         let valores = req.body;
         const options = {
-            url: 'https://fic2-m4-semana04-aula23-backend.schimith1.repl.co/add_usuario',
+            url: 'https://fic2-m4-semana04-aula22-backend.schimith1.repl.co/add_usuario',
             method: 'POST',
             data: valores
         };
@@ -35,7 +35,7 @@ module.exports = class Services {
     static async ProdutoCreate(req, res) {
         let valores = req.body;
         const options = {
-            url: 'https://fic2-m4-semana04-aula23-backend.schimith1.repl.co/add_produtos',
+            url: 'https://fic2-m4-semana04-aula22-backend.schimith1.repl.co/add_produtos',
             method: 'POST',
             data: valores
         };
@@ -46,7 +46,7 @@ module.exports = class Services {
     //LISTAR
     static async ProdutoListar(req, res) {
         const options = {
-            url: 'https://fic2-m4-semana04-aula23-backend.schimith1.repl.co/produtos',
+            url: 'https://fic2-m4-semana04-aula22-backend.schimith1.repl.co/produtos',
             method: 'GET',
             data: {}
         };

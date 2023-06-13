@@ -5,7 +5,7 @@ module.exports = class Services {
     static async UsuarioLogin(req, res) {
         let valores = req.body;
         const options = {
-            url: 'https://fic2-m4-semana04-aula21-backend.schimith1.repl.co/login',
+            url: 'https://fic2-m4-semana04-aula20-backend.schimith1.repl.co/login',
             method: 'POST',
             data: valores
         };
@@ -20,7 +20,7 @@ module.exports = class Services {
     static async UsuarioCreate(req, res) {
         let valores = req.body;
         const options = {
-            url: 'https://fic2-m4-semana04-aula21-backend.schimith1.repl.co/add_usuario',
+            url: 'https://fic2-m4-semana04-aula20-backend.schimith1.repl.co/add_usuario',
             method: 'POST',
             data: valores
         };

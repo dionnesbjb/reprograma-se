@@ -31,7 +31,7 @@ body {
 
 /* 
 02. Criar uma classe CSS chamada "header" para configurar o cabeçalho. Ela deve ter as seguintes configurações:
-a) margens internas superior e inferior de 50px e laterais de calc(10% + 2vw)
+a) margens internas superior e inferior de 50px e laterais de (10% + 2vw), usando a função calc() para as margens laterais
 b) imagem de fundo com gradiente linear, usando as cores var(--corPrincipal) e var(--corEscura)
 c) cor do texto branca
 d) largura de 100%

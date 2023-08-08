@@ -146,7 +146,7 @@ a {
 */
 .sobre .hero .imagem {
     /* 4a. flutuação à direita */
-    float: left;
+    float: right;
     /* 4b. largura fixa de 65% do elemento pai */
     width: 65%;
 }

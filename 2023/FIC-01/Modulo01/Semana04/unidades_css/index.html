@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+</head>
+
+<body>
+
+    <h1>Uso de %</h1>
+    <p>Div pai (quadrado preto) com 200px de largura e 200 pixels de altura</p>
+    <p>Div filha (quadrado vermelho) com 50% de largura e 50% de altura, ocupando 100px de largura e altura.
+        disponível da div pai. <b>Notem que o objeto pai e filho ficam estáticos em relação a resolução do
+            dispositivo</b>.
+    </p>
+    <div style="border: solid 1px black;width:200px;height: 200px;">
+        <div style="border: solid 1px red;width:50%;height: 50%;"></div>
+    </div>
+
+    <h1>Uso de vh e vw</h1>
+    <p>Div pai (quadrado preto) com "20vw (20%) de largura" e "20vh (20%) de altura" da área de visualização do
+        navegador
+        (viewport), ou seja, <b>irá ocupar esse espaço não importando a resolução do dispositivo.</b></p>
+    <p>Div filha (quadrado vermelho) com "10vw (10%) de largura" e "10vh (10%) de altura" da area de visualização do
+        navegador (viewport), ocupando 50% da área de visualização da div pai. Ou seja, <b>irá ocupar esse espaço não
+            importando a resolução do dispositivo.</b>.</p>
+
+    <div style="border: solid 1px black;width:20vw;height: 20vh;">
+        <div style="border: solid 1px red;width:10vw;height: 10vh;"></div>
+    </div>
+
+</body>
+
+</html>

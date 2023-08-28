@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Questão 10</title>
+    <style>
+        @media print {
+            body {
+                margin: 2cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-print-none">
+        <p><a href="index.html">Voltar ao Índice</a></p>
+        <h1 class="display-2">Questão 10</h1>
+        <p class="lead">Usando classes do Bootstrap 5, complemente o resultado da questão anterior de forma que esse enunciado e a primeira região do leiaute não sejam mostrados quando a página for impressa. Adicione também um parágrafo com o texto "Fonte: meublog.com.br" que só deve ser mostrado ao imprimir a página.</p>
+        <hr>
+    </div>
+    <!-- Valor: 1.5 pontos -->
+    <!-- FAZER AQUI -->
+    <div class="container-fluid container-lg">
+        <div class="row">
+            <div class="col-12 col-lg-3 bg-light d-print-none">
+                <div class="p-3">
+                    <h3 class="text-center text-lg-start">Meu Blog</h3>
+                    <ul class="list-unstyled p-4 p-lg-0 pt-lg-2 lead d-flex d-lg-block justify-content-center m-0">
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 1</li>
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 2</li>
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 3</li>
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 4</li>
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 5</li>
+                        <li class="d-inline-block d-lg-block mx-3 mx-lg-0 my-lg-2">Artigo 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <h1 class="display-3">Título do Artigo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum natus odio, repudiandae vel ratione optio cupiditate iure cumque, laboriosam vitae accusamus similique ducimus ullam, officiis amet dignissimos voluptatibus sed eius eveniet fugit. Tenetur maxime sint facilis quaerat enim quibusdam a nobis pariatur. Officiis voluptatibus quia iure harum atque odio sequi assumenda quidem repellendus, dicta esse! Porro debitis fuga optio placeat vero similique nulla nemo ratione illo dolorum aut culpa, neque omnis aliquid quibusdam architecto totam saepe velit quisquam veniam dicta hic? Sapiente, dolorum unde! Assumenda repudiandae voluptatem, itaque excepturi in omnis blanditiis iste sit hic rem. Enim, dignissimos eum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum natus odio, repudiandae vel ratione optio cupiditate iure cumque, laboriosam vitae accusamus similique ducimus ullam, officiis amet dignissimos voluptatibus sed eius eveniet fugit. Tenetur maxime sint facilis quaerat enim quibusdam a nobis pariatur. Officiis voluptatibus quia iure harum atque odio sequi assumenda quidem repellendus, dicta esse! Porro debitis fuga optio placeat vero similique nulla nemo ratione illo dolorum aut culpa, neque omnis aliquid quibusdam architecto totam saepe velit quisquam veniam dicta hic? Sapiente, dolorum unde! Assumenda repudiandae voluptatem, itaque excepturi in omnis blanditiis iste sit hic rem. Enim, dignissimos eum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum natus odio, repudiandae vel ratione optio cupiditate iure cumque, laboriosam vitae accusamus similique ducimus ullam, officiis amet dignissimos voluptatibus sed eius eveniet fugit. Tenetur maxime sint facilis quaerat enim quibusdam a nobis pariatur. Officiis voluptatibus quia iure harum atque odio sequi assumenda quidem repellendus, dicta esse! Porro debitis fuga optio placeat vero similique nulla nemo ratione illo dolorum aut culpa, neque omnis aliquid quibusdam architecto totam saepe velit quisquam veniam dicta hic? Sapiente, dolorum unde! Assumenda repudiandae voluptatem, itaque excepturi in omnis blanditiis iste sit hic rem. Enim, dignissimos eum.</p>
+                <p class="d-none d-print-block">Fonte: meublog.com.br</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

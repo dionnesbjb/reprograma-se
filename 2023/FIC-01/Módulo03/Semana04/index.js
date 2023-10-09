@@ -3,7 +3,7 @@ const prompt = require('prompt-sync')();
 alturas = []
 
 for (var i = 0; i < 10; i++) {                        // 2 pontos
-  a = parseFloat(console.log("Digite a altura: "));
+  a = parseFloat(prompt("Digite a altura: "));
   alturas.push(a);                                    // 2 pontos
 }
 

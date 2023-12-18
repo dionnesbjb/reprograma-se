@@ -7,6 +7,13 @@ console.log("Hoje é " + dayName[now.getDay()] + ", " + now.getDate () + " de " 
 
 var placa = prompt('Entre com a placa do carro: ');
 
+//Domingo = 0
+//Segunda = 1
+//Terça   = 2
+//Quarta  = 3
+//Quinta  = 4
+//Sexta   = 5
+//Sabado  = 6
 var weekday = new Date().getDay();
 
 if(placa.endsWith('1') || placa.endsWith('2')){

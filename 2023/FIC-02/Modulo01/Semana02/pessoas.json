@@ -1,0 +1,74 @@
+{
+    "pessoas": [
+      {
+        "nome": "Fulano 1",
+        "idade": 11,
+        "endereco": "Rua A",
+        "Nacionalidade": "Brasileiro",
+        "sexo": "Feminino"
+      },
+      {
+        "nome": "Fulano 2",
+        "idade": 12,
+        "endereco":"Rua B",
+        "Nacionalidade":"Brasileiro" ,
+        "sexo": "Masculino"
+      },
+      {
+        "nome": "Fulano 3",
+        "idade": 13,
+        "endereco": "Rua C",
+        "Nacionalidade":"Brasileiro",
+        "sexo": "Masculino"
+      },
+      {
+        "nome": "Fulano 4",
+        "idade": 14,
+        "endereco": "Rua D",
+        "Nacionalidade": "Brasileiro",
+        "sexo": "Masculino"
+      },
+      {
+        "nome": "Fulano 5",
+        "idade": 15,
+        "endereco": "Rua E",
+        "Nacionalidade":"Brasileiro",
+        "sexo": "Feminino"
+      },
+      {
+        "nome": "Fulano 6",
+        "idade": 16,
+        "endereco": "Rua F",
+        "Nacionalidade":"Brasileiro",
+        "sexo": "Masculino"
+      },
+      {
+        "nome": "Fulano 7",
+        "idade": 17,
+        "endereco": "Rua G",
+        "Nacionalidade":"Brasileiro",
+        "sexo": "Feminino"
+      },
+      {
+        "nome": "Fulano 8",
+        "idade": 18,
+        "endereco": "Rua H",
+        "Nacionalidade": "Brasileiro",
+        "sexo": "Feminino"
+      },
+      {
+        "nome": "Fulano 9",
+        "idade": 19,
+        "endereco": "Rua I",
+        "Nacionalidade":"Brasileiro",
+        "sexo":"Masculino"
+      },
+      {
+        "nome": "Fulano 10",
+        "idade": 20,
+        "endereco": "Rua J",
+        "Nacionalidade":"Brasileiro",
+        "sexo":"Feminino"
+      }
+    ]
+  }

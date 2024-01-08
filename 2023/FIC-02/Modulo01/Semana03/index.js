@@ -9,10 +9,10 @@ function adicionarCarro(lista, carro){
   return new Promise((resolve, reject) => {
     fs.writeFile('bd.json', json, (erro) => {
 
+      //retorne aqui um erro com o reject ou uma mensagem de sucesso com o resolve
       if(erro){
         reject(erro);
       }
-
       resolve('Carro adicionado com sucesso!')
     });
   });
@@ -23,10 +23,10 @@ function obterCarros(){
   return new Promise((resolve, reject) => {
     fs.readFile('./bd.json', 'utf-8', (erro, data) => {
 
+      //retorne aqui um erro com o reject ou os dados com o resolve
       if(erro){
         reject(erro);
-      }
-      
+      }      
       resolve(data);
     })
   });

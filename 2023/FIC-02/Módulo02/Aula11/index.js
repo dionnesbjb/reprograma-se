@@ -17,8 +17,8 @@ const servidor = http.createServer((req, res) => {
     else {
         const form = new formidavel.IncomingForm()
         form.parse(req, (erro, campos, arquivos) => {
-            const urlAntiga = arquivos.filetoupload.filepath
-            const urlNova = './enviodearquivo/' + arquivos.filetoupload.originalFilename
+            const urlAntiga = arquivos.filetoupload[0].filepath
+            const urlNova = './enviodearquivo/' + arquivos.filetoupload[0].originalFilename
             var rawData = fs.readFileSync(urlAntiga)
             fs.writeFile(urlNova, rawData, function (err) {
                 if (err) console.log(err)
